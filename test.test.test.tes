@@ -1,0 +1,208 @@
+				<div class="form-group">
+					<label for="full_name" class="form-label">Nombre Completo</label>
+					<input
+						type="text"
+						id="full_name"
+						autocomplete="name"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted && createDonacion.fields.name.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.name.issues()?.length !== undefined
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields.name.as('text')}
+					/>
+					{#each createDonacion.fields.name.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div>
+
+				<div class="form-group">
+					<label for="email">Correo electrónico</label>
+					<input
+						id="email"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted && createDonacion.fields.email.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted && createDonacion.fields.email.issues()?.length > 0
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields.email.as('email')}
+					/>
+
+					{#each createDonacion.fields.email.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div>
+
+				<div class="form-group">
+					<label for="contacto">Numero de telefono</label>
+					<input
+						id="contacto"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.contacto.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted && createDonacion.fields.contacto.issues()?.length > 0
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields.contacto.as('tel')}
+					/>
+
+					{#each createDonacion.fields.contacto.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div>
+
+				<!-- <div class="">
+					<label for="donation-frecuencia">Frecuencia</label>
+					<select
+						id="donation-frecuencia"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.frecuencia.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.frecuencia.issues()?.length !== undefined
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields.frecuencia.as('select')}
+					>
+						<option value="monthly" selected>Donación mensual</option>
+						<option value="single">Donación única</option>
+						<option value="sponsorship">Apadrinamiento</option>
+					</select>
+
+					{#each createDonacion.fields.frecuencia.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="form-group">
+					<label for="iban">IBAM</label>
+					<input
+						id="iban"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted && createDonacion.fields._iban.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted && createDonacion.fields._iban.issues()?.length > 0
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields._iban.as('text')}
+					/>
+
+					{#each createDonacion.fields._iban.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div>
+
+				<div class="form-group">
+					<label for="donation-type">Tipo de donación</label>
+					<select
+						id="donation-type"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted && createDonacion.fields.type.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.type.issues()?.length !== undefined
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields.type.as('select')}
+					>
+						<option value="individual" selected>Cliente</option>
+						<option value="company">Empresa</option>
+					</select>
+
+					{#each createDonacion.fields.type.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div>
+
+				<div class="form-group">
+					<label for="amount">Cantidad (€)</label>
+					<div class="amount-options">
+						<button type="button" class="amount-btn" onclick={() => (amount = 10)}>€10</button>
+						<button type="button" class="amount-btn" onclick={() => (amount = 25)}>€25</button>
+						<button type="button" class="amount-btn" onclick={() => (amount = 50)}>€50</button>
+						<button type="button" class="amount-btn" onclick={() => (amount = 100)}>€100</button>
+					</div>
+					<input
+						id="amount"
+						required
+						min="1"
+						step="0.01"
+						bind:value={amount}
+						placeholder="Otra cantidad"
+						aria-describedby="amount-error"
+						class={[
+							'form-control',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.cantidad.issues() === undefined
+								? 'is-valid'
+								: '',
+							donationFormSubmitted.submitted &&
+							createDonacion.fields.cantidad.issues()?.length !== undefined
+								? 'is-invalid'
+								: ''
+						]}
+						{...createDonacion.fields.cantidad.as('number')}
+					/>
+					{#each createDonacion.fields.cantidad.issues() as { message }}
+						<div class="invalid-feedback">{message}</div>
+					{/each}
+				</div>
+
+				<div class="form-group">
+					<label for="message">Mensaje (opcional)</label>
+					<textarea
+						id="message"
+						name="message"
+						rows="4"
+						placeholder="Déjanos un mensaje..."
+						class="form-input"
+					></textarea>
+				</div>

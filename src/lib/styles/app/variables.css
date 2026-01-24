@@ -1,0 +1,102 @@
+/* Variables CSS - UNICEF España */
+/* Definición de todas las variables CSS utilizadas en el proyecto */
+
+:root {
+  /* Colores principales */
+  --color-gradient-start: #00b4d8;
+  --color-gradient-end: #0077b6;
+  --color-accent: #ff6b6b;
+  --color-success: #06d6a0;
+  --color-warning: #ffd60a;
+  --color-error: #E53E3E;
+  
+  /* Colores neutros */
+  --color-dark: #2d3748;
+  --color-light-gray: #f7fafc;
+  --color-medium-gray: #e2e8f0;
+  --color-text-muted: #4A5568;
+  
+  /* Sombras */
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* Elementos de diseño */
+  --border-radius: 12px;
+  --border-radius-small: 6px;
+  --border-radius-large: 20px;
+  
+  /* Transiciones */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease;
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Tipografía */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  
+  /* Línea de altura */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* Pesos de fuente */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Ancho máximo del contenedor */
+  --container-max-width: 1200px;
+  --container-padding: 2rem;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* Variables para modo responsivo */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+    --font-size-5xl: 2.5rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.5rem;
+    --spacing-3xl: 2.5rem;
+    --spacing-2xl: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.75rem;
+    --spacing-3xl: 2rem;
+    --spacing-2xl: 1.5rem;
+  }
+}
