@@ -8,12 +8,21 @@
 	type Props = {
 		label: string;
 		name: string;
+		pending: boolean;
 		issues: RemoteFormIssue[] | undefined;
 		tag?: 'input' | 'textarea';
 	} & SvelteHTMLElements['input'];
 
 	const id = $props.id();
-	const { label, name, value = $bindable(), issues, tag = 'input', ...restProps }: Props = $props();
+	const {
+		label,
+		name,
+		value = $bindable(),
+		pending,
+		issues,
+		tag = 'input',
+		...restProps
+	}: Props = $props();
 
 	const validationStatus = inputValidationStatus({ issues: () => issues });
 </script>
@@ -25,8 +34,8 @@
 		{id}
 		{name}
 		class="form-control"
-		class:is-valid={validationStatus.status === InputStates['SUCCESS']}
-		class:is-invalid={validationStatus.status === InputStates['ERROR']}
+		class:is-valid={!pending && validationStatus.status === InputStates['SUCCESS']}
+		class:is-invalid={!pending && validationStatus.status === InputStates['ERROR']}
 		aria-describedby="{id}-error"
 		{...restProps}
 	/>

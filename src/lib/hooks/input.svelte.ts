@@ -17,6 +17,10 @@ export const inputValidationStatus = ({ issues }: Args) => {
 	const form_state = getFormContext();
 
 	$effect(() => {
+		console.log($effect.pending());
+	});
+
+	$effect(() => {
 		if (!form_state.isSubmitted) {
 			state.status = InputStates['UNDEFINED'];
 

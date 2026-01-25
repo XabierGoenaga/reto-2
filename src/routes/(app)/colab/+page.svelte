@@ -57,18 +57,21 @@
 			<Form success={createDonacion.result?.success ?? false} {...createDonacion}>
 				<Input
 					label="Nombre"
+					pending={!!createDonacion.pending}
 					{...createDonacion.fields.name.as('text')}
 					issues={createDonacion.fields.name.issues()}
 				/>
 
 				<Input
 					label="Email"
+					pending={!!createDonacion.pending}
 					{...createDonacion.fields.email.as('email')}
 					issues={createDonacion.fields.email.issues()}
 				/>
 
 				<Input
 					label="Numero de Telefono"
+					pending={!!createDonacion.pending}
 					{...createDonacion.fields.contacto.as('tel')}
 					issues={createDonacion.fields.contacto.issues()}
 				/>
@@ -95,12 +98,14 @@
 
 				<Input
 					label="Candidad"
+					pending={!!createDonacion.pending}
 					{...createDonacion.fields.cantidad.as('number')}
 					issues={createDonacion.fields.cantidad.issues()}
 				/>
 
 				<Input
 					label="IBAN"
+					pending={!!createDonacion.pending}
 					{...createDonacion.fields._iban.as('text')}
 					issues={createDonacion.fields._iban.issues()}
 				/>
