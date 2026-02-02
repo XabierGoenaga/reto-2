@@ -1,0 +1,9 @@
+CREATE TABLE "PREGUNTAS" (
+	"ID" serial PRIMARY KEY,
+	"FULL_NAME" text NOT NULL,
+	"EMAIL" text NOT NULL,
+	"PHONE" text NOT NULL,
+	"affair" text NOT NULL,
+	"MENSAJE" text NOT NULL,
+	"ACUERDO_NOTIFICACIONES" boolean DEFAULT false NOT NULL
+);

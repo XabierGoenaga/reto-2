@@ -6,19 +6,14 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
-			out: 'build'
+			out: 'build',
+			precompress: false,
+			envPrefix: ''
 		}),
 		experimental: {
 			remoteFunctions: true
 		}
 	},
-	// onwarn: (warning, handler) => {
-	// 	// Desactivar la advertencia específica
-	// 	if (warning.code === 'a11y_invalid_attribute') {
-	// 		return;
-	// 	}
-	// 	handler(warning);
-	// },
 	compilerOptions: {
 		runes: true,
 		experimental: {

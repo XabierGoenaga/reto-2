@@ -1,4 +1,4 @@
-import { char, pgTable, serial, text, varchar, integer } from 'drizzle-orm/pg-core';
+import { char, pgTable, serial, text, varchar, integer, boolean } from 'drizzle-orm/pg-core';
 
 export const donante = pgTable('DONANTE', {
 	id: serial('ID').primaryKey().notNull(),
@@ -16,5 +16,6 @@ export const financia = pgTable('FINANCIA', {
 		.references(() => donante.id),
 	tipo: text('TIPO', { enum: ['monthly', 'single', 'sponsorship'] }),
 	cantidad: integer('CANTIDAD').notNull(), // TODO: Hacer que no pueda ser negativo
-	iban: char('IBAN', { length: 24 }).notNull()
+	iban: char('IBAN', { length: 24 }).notNull(),
+	procesada: boolean('Procesada').default(false)
 });

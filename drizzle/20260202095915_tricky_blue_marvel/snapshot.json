@@ -1,0 +1,365 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "ecbeb782-d6c9-4c03-92aa-860e1c2601ba",
+  "prevIds": [
+    "083d1897-7fff-4fbe-ba59-70935613b822"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "ALMACEN",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "DONANTE",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "FINANCIA",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "PREGUNTAS",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "varchar(5)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "codigo",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "ALMACEN"
+    },
+    {
+      "type": "varchar(8)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "tamano",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "ALMACEN"
+    },
+    {
+      "type": "varchar(30)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ubicacion",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "ALMACEN"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ID",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "DONANTE"
+    },
+    {
+      "type": "varchar(30)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "NOMBRE",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "DONANTE"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "TIPO",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "DONANTE"
+    },
+    {
+      "type": "varchar(50)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "DIRECCION",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "DONANTE"
+    },
+    {
+      "type": "char(9)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "CONTACTO",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "DONANTE"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ID_DONACION",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ID_PROYECTO",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ID_DONANTE",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "TIPO",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "CANTIDAD",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "type": "char(24)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "IBAN",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ID",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "FULL_NAME",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "EMAIL",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "PHONE",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "affair",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "MENSAJE",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "false",
+      "generated": null,
+      "identity": null,
+      "name": "ACUERDO_NOTIFICACIONES",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "PREGUNTAS"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "ID_DONANTE"
+      ],
+      "schemaTo": "public",
+      "tableTo": "DONANTE",
+      "columnsTo": [
+        "ID"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "FINANCIA_ID_DONANTE_DONANTE_ID_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "FINANCIA"
+    },
+    {
+      "columns": [
+        "codigo"
+      ],
+      "nameExplicit": false,
+      "name": "ALMACEN_pkey",
+      "schema": "public",
+      "table": "ALMACEN",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "ID"
+      ],
+      "nameExplicit": false,
+      "name": "DONANTE_pkey",
+      "schema": "public",
+      "table": "DONANTE",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "ID_DONACION"
+      ],
+      "nameExplicit": false,
+      "name": "FINANCIA_pkey",
+      "schema": "public",
+      "table": "FINANCIA",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "ID"
+      ],
+      "nameExplicit": false,
+      "name": "PREGUNTAS_pkey",
+      "schema": "public",
+      "table": "PREGUNTAS",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}

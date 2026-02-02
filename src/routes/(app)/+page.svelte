@@ -1,5 +1,5 @@
-<script>
-	import { asset, resolve } from '$app/paths';
+<script lang="ts">
+	import { resolve } from '$app/paths';
 </script>
 
 <main id="main-content">
@@ -24,9 +24,10 @@
 				</div>
 			</div>
 			<div class="hero-image">
-				<img
-					src={asset('/ft1.jpeg')}
-					alt="Niños sonriendo en un programa de UNICEF"
+				<enhanced:img
+					src="$lib/assets/ft1.jpeg?w=1280;640;400"
+					sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+					alt="Niños en Congo beneficiarios de programas de UNICEF"
 					loading="lazy"
 				/>
 				<div class="hero-stats">
@@ -122,8 +123,9 @@
 					</a>
 				</div>
 				<div class="impact-image">
-					<img
-						src={asset('/ft2-congo.jpeg')}
+					<enhance:img
+						src="$lib/assets/ft2-congo.jpeg?w=1280;640;400"
+						sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
 						alt="Niños en Congo beneficiarios de programas de UNICEF"
 						loading="lazy"
 					/>
@@ -139,9 +141,10 @@
 			<div class="help-step">
 				<div class="step-number">1</div>
 				<div class="step-content">
-					<img
-						src={asset('/ftpeq1.jpg')}
-						alt="Ilustración de persona eligiendo cómo ayudar"
+					<enhanced:img
+						src="$lib/assets/ftpeq1.jpg?w=1280;640;400"
+						sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+						alt="Niños en Congo beneficiarios de programas de UNICEF"
 						loading="lazy"
 					/>
 					<h3>Elige tu forma de ayudar</h3>
@@ -153,9 +156,10 @@
 			<div class="help-step">
 				<div class="step-number">2</div>
 				<div class="step-content">
-					<img
-						src={asset('/ftpeq2.jpg')}
-						alt="Mapa mundial mostrando el alcance de UNICEF"
+					<enhanced:img
+						src="$lib/assets/ftpeq2.jpg?w=1280;640;400"
+						sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+						alt="Niños en Congo beneficiarios de programas de UNICEF"
 						loading="lazy"
 					/>
 					<h3>Llegamos donde más se necesita</h3>
@@ -168,9 +172,10 @@
 			<div class="help-step">
 				<div class="step-number">3</div>
 				<div class="step-content">
-					<img
-						src={asset('/ftpeq3.webp')}
-						alt="Niños recibiendo educación y cuidados médicos"
+					<enhanced:img
+						src="$lib/assets/ftpeq3.webp?w=1280;640;400"
+						sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+						alt="Niños en Congo beneficiarios de programas de UNICEF"
 						loading="lazy"
 					/>
 					<h3>Transformamos vidas juntos</h3>

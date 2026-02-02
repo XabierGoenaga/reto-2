@@ -8,8 +8,6 @@
 	import '$lib/styles/app/contact.css';
 	import '$lib/styles/app/collaboration.css';
 
-	import 'bootstrap/dist/css/bootstrap.min.css';
-
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import type { ResolvedPathname } from '$app/types';
@@ -45,8 +43,6 @@
 </svelte:head>
 
 <header class="header_container">
-	<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-
 	<a href={resolve('/')} class="header_title">UNICEF</a>
 
 	<input

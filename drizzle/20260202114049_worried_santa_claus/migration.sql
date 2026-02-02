@@ -1,0 +1,1 @@
+ALTER TABLE "FINANCIA" ADD COLUMN "Procesada" boolean DEFAULT false;

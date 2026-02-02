@@ -1,0 +1,18 @@
+CREATE TABLE "DONANTE" (
+	"ID" serial PRIMARY KEY,
+	"NOMBRE" varchar(30) NOT NULL,
+	"TIPO" text,
+	"DIRECCION" varchar(50),
+	"CONTACTO" char(9) NOT NULL
+);
+--> statement-breakpoint
+CREATE TABLE "FINANCIA" (
+	"ID_DONACION" serial PRIMARY KEY,
+	"ID_PROYECTO" serial,
+	"ID_DONANTE" serial,
+	"TIPO" text,
+	"CANTIDAD" integer NOT NULL,
+	"IBAN" char(24) NOT NULL
+);
+--> statement-breakpoint
+ALTER TABLE "FINANCIA" ADD CONSTRAINT "FINANCIA_ID_DONANTE_DONANTE_ID_fkey" FOREIGN KEY ("ID_DONANTE") REFERENCES "DONANTE"("ID");

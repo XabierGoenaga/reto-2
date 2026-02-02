@@ -1,0 +1,1 @@
+ALTER TABLE "PREGUNTAS" ADD COLUMN "answered" boolean DEFAULT false NOT NULL;

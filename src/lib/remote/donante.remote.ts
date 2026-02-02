@@ -1,8 +1,9 @@
+import { error } from '@sveltejs/kit';
+import { eq } from 'drizzle-orm';
+
 import { query, form, command } from '$app/server';
 import { DonanteDTO } from '$lib/dto';
 import { db, schema } from '$lib/server';
-import { error } from '@sveltejs/kit';
-import { eq } from 'drizzle-orm';
 
 export const getDonantes = query(async () => {
 	return await db.query.donante.findMany();

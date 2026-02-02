@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { PageProps } from './$types';
-
 	import { Form, Input, Select, Toust } from '$lib/component';
 	import { createDonacion } from '$lib/remote';
 	import {
@@ -9,10 +7,6 @@
 		donationTypes,
 		donationTypesDisplayName
 	} from '$lib/constant';
-
-	const { form }: PageProps = $props();
-
-	let cantidad: number = $state(0);
 </script>
 
 <main id="main-content">
