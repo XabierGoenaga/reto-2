@@ -123,7 +123,7 @@
 					</a>
 				</div>
 				<div class="impact-image">
-					<enhance:img
+					<enhanced:img
 						src="$lib/assets/ft2-congo.jpeg?w=1280;640;400"
 						sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
 						alt="Niños en Congo beneficiarios de programas de UNICEF"
@@ -135,7 +135,7 @@
 	</section>
 
 	<!-- How to Help Section -->
-	<section class="help-section wrapper">
+	<section class="help-section wrapper wrapper-custom">
 		<h2 class="section-title">Cómo puedes ayudar</h2>
 		<div class="help-steps">
 			<div class="help-step">
@@ -211,3 +211,23 @@
 		</div>
 	</section>
 </main>
+
+<style>
+	.wrapper-custom {
+		max-width: unset;
+	}
+
+	.mission-section {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+
+	.help-section {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+
+	.help-section > h2 {
+		color: white;
+	}
+</style>

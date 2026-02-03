@@ -32,9 +32,6 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href={resolve('/admin')}>Inicio</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link" href={resolve('/admin/almacen')}>Almacén</a>
 				</li>
 				<li class="nav-item">
@@ -42,6 +39,9 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href={resolve('/admin/donantes')}>Donantes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href={resolve('/admin/donaciones')}>Donaciones</a>
 				</li>
 			</ul>
 		</div>

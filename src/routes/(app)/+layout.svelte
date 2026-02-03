@@ -73,6 +73,13 @@
 		>
 			Contacto
 		</a>
+		<a
+			href={resolve('/admin/almacen')}
+			onclick={() => (open = false)}
+			aria-current={activePage('/admin')}
+		>
+			Panel de Administración
+		</a>
 	</nav>
 </header>
 

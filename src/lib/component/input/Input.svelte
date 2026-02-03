@@ -33,6 +33,7 @@
 		this={tag}
 		{id}
 		{name}
+		{value}
 		class="form-control"
 		class:is-valid={!pending && validationStatus.status === InputStates['SUCCESS']}
 		class:is-invalid={!pending && validationStatus.status === InputStates['ERROR']}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/admin/almacen/xsltong.xslt"?>
+<productos>
+    <producto>
+        <nombre>Recycled Concrete Keyboard</nombre>
+        <descripcion>The User-centric demand-driven approach Soap offers reliable performance and growing design</descripcion>
+        <cantidad>31</cantidad>
+    </producto>
+    <producto>
+        <nombre>Fantastic Aluminum Shirt</nombre>
+        <descripcion>New Tuna model with 49 GB RAM, 550 GB storage, and small features</descripcion>
+        <cantidad>61</cantidad>
+    </producto>
+    <producto>
+        <nombre>Frozen Metal Shirt</nombre>
+        <descripcion>The Horizontal content-based hierarchy Bike offers reliable performance and extra-large design</descripcion>
+        <cantidad>31</cantidad>
+    </producto>
+    <producto>
+        <nombre>Fresh Gold Soap</nombre>
+        <descripcion>The sleek and flashy Chips comes with violet LED lighting for smart functionality</descripcion>
+        <cantidad>201</cantidad>
+    </producto>
+    <producto>
+        <nombre>Incredible Bronze Chair</nombre>
+        <descripcion>Our parrot-friendly Chicken ensures fine comfort for your pets</descripcion>
+        <cantidad>41</cantidad>
+    </producto>
+    <producto>
+        <nombre>Tasty Granite Chair</nombre>
+        <descripcion>New yellow Bacon with ergonomic design for best comfort</descripcion>
+        <cantidad>191</cantidad>
+    </producto>
+    <producto>
+        <nombre>Bespoke Wooden Chicken</nombre>
+        <descripcion>Introducing the Northern Mariana Islands-inspired Towels, blending dead style with local craftsmanship</descripcion>
+        <cantidad>61</cantidad>
+    </producto>
+    <producto>
+        <nombre>Modern Rubber Car</nombre>
+        <descripcion>Discover the whale-like agility of our Pants, perfect for powerless users</descripcion>
+        <cantidad>71</cantidad>
+    </producto>
+    <producto>
+        <nombre>Practical Granite Chicken</nombre>
+        <descripcion>New Pants model with 91 GB RAM, 668 GB storage, and flimsy features</descripcion>
+        <cantidad>81</cantidad>
+    </producto>
+    <producto>
+        <nombre>Awesome Wooden Tuna</nombre>
+        <descripcion>Discover the hamster-like agility of our Chips, perfect for moral users</descripcion>
+        <cantidad>15</cantidad>
+    </producto>
+</productos>
