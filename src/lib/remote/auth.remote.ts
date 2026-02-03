@@ -18,7 +18,7 @@ export const login = form(AuthDTO.LOGIN, (data, issue) => {
 
 	const request = getRequestEvent();
 
-	request.cookies.set('logged', 'true', { path: request.url.pathname });
+	request.cookies.set('logged', 'true', { path: "/" });
 
 	redirect(302, resolve('/admin/almacen'));
 });
