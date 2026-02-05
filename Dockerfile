@@ -18,7 +18,8 @@ COPY package.json pnpm-lock.yaml ./
 
 # Instalar dependencias usando el store de PNPM
 # --frozen-lockfile asegura que use exactamente las versiones del lockfile
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+#RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 # ==========================================
 # STAGE 2: Build
@@ -41,7 +42,8 @@ ENV DATABASE_URL=postgresql://root:mysecretpassword@192.168.1.2:5432/local
 RUN pnpm run build
 
 # Instalar solo dependencias de producción
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+#RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+RUN pnpm install --prod --frozen-lockfile
 
 # ==========================================
 # STAGE 3: Runner (Producción)
