@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/admin/donantes/xsltong.xslt"?>
+<donantes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="donantes-reto-sasha.xsd">
+    <donante tipo="Empresa">
+        <nombre>Krystal Roob</nombre>
+        <telefono>271-315-7359 x848</telefono>
+    </donante>
+    <donante tipo="Individual">
+        <nombre>Rick Murphy</nombre>
+        <telefono>506.307.3091 x1456</telefono>
+    </donante>
+    <donante tipo="Individual">
+        <nombre>Miss Ella Glover</nombre>
+        <telefono>1-369-317-7503 x25117</telefono>
+    </donante>
+    <donante tipo="Empresa">
+        <nombre>Jeremy Jacobson</nombre>
+        <telefono>1-266-241-9169 x12567</telefono>
+    </donante>
+    <donante tipo="Empresa">
+        <nombre>Krista Weber</nombre>
+        <telefono>341.724.3084 x1440</telefono>
+    </donante>
+    <donante tipo="Empresa">
+        <nombre>Marlon Kovacek</nombre>
+        <telefono>1-218-290-6111</telefono>
+    </donante>
+    <donante tipo="Empresa">
+        <nombre>Miss Louise Dietrich</nombre>
+        <telefono>1-888-852-5014 x342</telefono>
+    </donante>
+    <donante tipo="Individual">
+        <nombre>Dr. Alfred Dooley MD</nombre>
+        <telefono>228-841-0051</telefono>
+    </donante>
+    <donante tipo="Individual">
+        <nombre>Earl Wuckert-Champlin</nombre>
+        <telefono>(223) 978-9502 x048</telefono>
+    </donante>
+    <donante tipo="Individual">
+        <nombre>Glenda Mann</nombre>
+        <telefono>(926) 316-3405 x096</telefono>
+    </donante>
+</donantes>

@@ -1,8 +1,8 @@
 import type { RequestHandler } from './$types';
-import data from './data.xml?raw';
+import xsltong from './xsltong.xslt?raw';
 
 export const GET: RequestHandler = () => {
-	return new Response(data, {
+	return new Response(xsltong, {
 		headers: {
 			'Content-Type': 'application/xml; charset=utf-8'
 		}

@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	<div class="container-fluid">
-		<a class="navbar-brand" href={resolve('/admin')}>
+		<a class="navbar-brand" href={resolve('/admin/almacen')}>
 			<i class="bi bi-shield-check me-2"></i>Panel de Administración
 		</a>
 		<button
