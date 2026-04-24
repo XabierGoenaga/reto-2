@@ -30,6 +30,7 @@
                 <li class="nav-item"><a class="nav-link" href="/admin/almacen">Almacén</a></li>
                 <li class="nav-item"><a class="nav-link" href="/admin/questions">Preguntas</a></li>
                 <li class="nav-item"><a class="nav-link" href="/admin/donantes">Donantes</a></li>
+                <li class="nav-item"><a class="nav-link" href="/admin/proyectos">Proyectos</a></li>
                 <li class="nav-item"><a class="nav-link" href="/admin/donaciones">Donaciones</a></li>
               </ul>
             </div>

@@ -41,6 +41,9 @@
 					<a class="nav-link" href={resolve('/admin/donantes')}>Donantes</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href={resolve('/admin/proyectos')}>Proyectos</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href={resolve('/admin/donaciones')}>Donaciones</a>
 				</li>
 			</ul>
