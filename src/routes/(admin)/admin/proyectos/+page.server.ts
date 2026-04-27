@@ -33,6 +33,24 @@ export const actions: Actions = {
             Pais: form.get("Pais")
         };
 
+        const response = await fetch(API, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${TOKEN}`
+            }
+        }).then((res) => res.json())
+
+        const exits = response.find(({ IDEmpSupervisor }) => (data.IDEmpSupervisor === IDEmpSupervisor));
+
+        if (exits) {
+            return fail(400, {
+                IDEmpSupervisor: {
+                    message: "No se a encontrado un supervisor con ese error."
+                }
+            })
+        }
+
         await fetch(API, {
             method: "POST",
             headers: {

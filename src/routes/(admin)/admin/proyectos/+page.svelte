@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 
-	const { data } = $props() as PageProps;
+	const { data, form } = $props() as PageProps;
 </script>
 
 <div class="container mt-4">
@@ -40,6 +40,10 @@
 						placeholder="Supervisor ID"
 						required
 					/>
+
+					{#if form?.IDEmpSupervisor}
+						<div>{form.IDEmpSupervisor}</div>
+					{/if}
 				</div>
 
 				<div class="col-md-3">
