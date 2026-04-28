@@ -9,7 +9,7 @@ const config = {
 			out: 'build',
 			precompress: false,
 			envPrefix: ''
-		}),
+		}),csrf:{ trustedOrigins: ['http://localhost:5173', 'http://localhost:4173', "https://www.xabier.uk", "http://www.xabier.uk"] },
 		experimental: {
 			remoteFunctions: true
 		}

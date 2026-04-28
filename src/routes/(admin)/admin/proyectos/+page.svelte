@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import type { PageProps } from './$types';
 
-	const { data, form } = $props() as PageProps;
+	const { data, form	 } = $props() as PageProps;
+
+	console.log("Data:", form);
 </script>
 
 <div class="container mt-4">
@@ -11,7 +14,7 @@
 	<div class="card mb-4">
 		<div class="card-header">Crear Proyecto</div>
 		<div class="card-body">
-			<form action="?/create" method="post" class="row g-2">
+			<form action="?/create" use:enhance method="post" class="row g-2">
 				<div class="col-md-4">
 					<input class="form-control" name="Titulo" placeholder="Título" required />
 				</div>
@@ -21,7 +24,16 @@
 				</div>
 
 				<div class="col-md-4">
-					<input class="form-control" name="Presupuesto" type="number" placeholder="Presupuesto" />
+					<input
+						class="form-control {form?.Presupuesto ? 'is-invalid' : ''}"
+						name="Presupuesto"
+						type="number"
+						min="0"
+						placeholder="Presupuesto"
+					/>
+					{#if form?.Presupuesto}
+						<div class="invalid-feedback">{form.Presupuesto.message}</div>
+					{/if}
 				</div>
 
 				<div class="col-md-3">
@@ -34,21 +46,27 @@
 
 				<div class="col-md-3">
 					<input
-						class="form-control"
+						class="form-control {form?.IDEmpSupervisor ? 'is-invalid' : ''}"
 						name="IDEmpSupervisor"
 						type="number"
+						min="1"
 						placeholder="Supervisor ID"
 						required
 					/>
-
 					{#if form?.IDEmpSupervisor}
-						<div>{form.IDEmpSupervisor}</div>
+						<div class="invalid-feedback">{form.IDEmpSupervisor.message}</div>
 					{/if}
 				</div>
 
 				<div class="col-md-3">
 					<input class="form-control" name="Pais" placeholder="País" />
 				</div>
+
+				{#if form?.general}
+					<div class="col-12">
+						<div class="alert alert-danger py-2">{form.general.message}</div>
+					</div>
+				{/if}
 
 				<div class="col-12">
 					<button class="btn btn-primary">Crear</button>
@@ -60,6 +78,10 @@
 	<!-- LISTA -->
 	<div class="card">
 		<div class="card-header">Proyectos</div>
+
+		{#if form?.id}
+			<div class="alert alert-danger m-3 py-2">{form.id.message}</div>
+		{/if}
 
 		<div class="card-body">
 			<table class="table table-striped table-hover">
@@ -82,9 +104,9 @@
 							<td>{p.Presupuesto ?? 0}</td>
 
 							<td>
-								<form action="?/delete" method="post" class="d-inline">
+								<form action="?/delete" use:enhance method="post" class="d-inline">
 									<input type="hidden" name="id" value={p.ID} />
-									<button class="btn btn-danger btn-sm"> Eliminar </button>
+									<button class="btn btn-danger btn-sm">Eliminar</button>
 								</form>
 							</td>
 						</tr>

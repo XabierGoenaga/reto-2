@@ -1,11 +1,8 @@
-<script>
+<script lang="ts">
 	import { Form, Input } from '$lib/component';
-	import { login } from '$lib/remote';
+	import type { PageProps } from './$types.d';
 
-	$effect.pre(() => {
-		login.fields.email.set('admin@admin.admin');
-		login.fields._password.set('admin');
-	});
+	const { data, form }: PageProps = $props();
 </script>
 
 <div class="container">
@@ -23,21 +20,21 @@
 
 				<div class="card-body p-5">
 					<!-- Formulario de login -->
-					<Form success={undefined} {...login}>
+					<Form success={undefined} method="post" action="?/login" class="mb-4">
 						<!-- Campo de usuario -->
 						<Input
 							label="Nombre de Usuario"
-							{...login.fields.email.as('email')}
-							pending={!!login.pending}
-							issues={login.fields.email.issues()}
+							name="email"
+							type="email"
+							placeholder="Ingresa tu email"
 						/>
 
 						<!-- Campo de contraseña -->
 						<Input
 							label="Contraseña"
-							{...login.fields._password.as('password')}
-							pending={!!login.pending}
-							issues={login.fields._password.issues()}
+							name="password"
+							type="password"
+							placeholder="Ingresa tu contraseña"
 						/>
 
 						<!-- Opciones adicionales -->
@@ -48,7 +45,7 @@
 
 						<!-- Botón de login -->
 						<div class="d-grid gap-2">
-							<button type="submit" disabled={!!login.pending} class="btn btn-primary btn-lg">
+							<button type="submit" class="btn btn-primary btn-lg">
 								<i class="bi bi-box-arrow-in-right me-2"></i>
 								Iniciar Sesión
 							</button>
