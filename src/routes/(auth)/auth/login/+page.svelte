@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { Form, Input } from '$lib/component';
 	import type { PageProps } from './$types.d';
 
@@ -45,7 +47,11 @@
 
 						<!-- Botón de login -->
 						<div class="d-grid gap-2">
-							<button type="submit" class="btn btn-primary btn-lg">
+							<button
+								type="button"
+								class="btn btn-primary btn-lg"
+								onclick={() => goto(resolve('/(admin)/admin/almacen'))}
+							>
 								<i class="bi bi-box-arrow-in-right me-2"></i>
 								Iniciar Sesión
 							</button>

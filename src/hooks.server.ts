@@ -26,4 +26,4 @@ const redirectAuth: Handle = async ({ event, resolve }) => {
 	return await resolve(event);
 };
 
-export const handle = sequence(redirectAuth);
+export const handle = sequence();
